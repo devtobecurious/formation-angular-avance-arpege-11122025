@@ -1,0 +1,12 @@
+@let selfies = selfies$ | async;
+
+{{selfies | json}}
+
+@if(selfies) {
+@for(selfie of selfies; track selfie.id) {
+<app-one-card-selfie [selfie]="selfie" />
+}
+@empty {
+
+}
+}
