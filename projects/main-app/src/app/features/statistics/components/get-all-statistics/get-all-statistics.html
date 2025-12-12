@@ -1,0 +1,12 @@
+@let list = value();
+@let loading = isLoading();
+
+@if(loading) {
+<p>Loading statistics...</p>
+}
+
+<ul>
+  @for(statistic of list; track statistic) {
+  <li>{{ statistic.totalSelfies }}</li>
+  }
+</ul>
